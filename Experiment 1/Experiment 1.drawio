@@ -1,0 +1,82 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="aYc05Be-wd2jp2Bxxbcz">
+    <mxGraphModel dx="1363" dy="771" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="light-dark(#FFFFFF,#000000)" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="kpc12r9Ur0TqC54VRjQN-21" parent="1" style="swimlane;startSize=30;fillColor=#fff2cc;strokeColor=#d6b656;html=1;fontStyle=1;align=center;labelBackgroundColor=default;labelBorderColor=default;textShadow=1;whiteSpace=wrap;" value="System Requirements" vertex="1">
+          <mxGeometry height="560" width="320" x="130" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="kpc12r9Ur0TqC54VRjQN-22" parent="kpc12r9Ur0TqC54VRjQN-21" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;labelBackgroundColor=default;labelBorderColor=default;textShadow=1;" value="&lt;b&gt;Functional Requirements&lt;/b&gt;&lt;br&gt;&lt;hr&gt;&lt;ul&gt;&lt;li&gt;&lt;b&gt;URL Shortening:&lt;/b&gt; Convert long URLs into unique, shorter aliases (e.g., tinyurl.com/abc123).&lt;/li&gt;&lt;li&gt;&lt;b&gt;Redirection:&lt;/b&gt; Instantly redirect short URLs to original URLs with HTTP 302 (Found).&lt;/li&gt;&lt;li&gt;&lt;b&gt;Custom Alias:&lt;/b&gt; Allow users to define custom short links.&lt;/li&gt;&lt;li&gt;&lt;b&gt;Expiration:&lt;/b&gt; Support custom expiration times; auto-delete expired links.&lt;/li&gt;&lt;/ul&gt;" vertex="1">
+          <mxGeometry height="240" width="300" x="10" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="kpc12r9Ur0TqC54VRjQN-23" parent="kpc12r9Ur0TqC54VRjQN-21" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;labelBackgroundColor=default;labelBorderColor=default;textShadow=1;" value="&lt;b&gt;Non-Functional Requirements&lt;/b&gt;&lt;br&gt;&lt;hr&gt;&lt;ul&gt;&lt;li&gt;&lt;b&gt;High Availability:&lt;/b&gt; System must be highly available (99.99% uptime) with no single point of failure.&lt;/li&gt;&lt;li&gt;&lt;b&gt;Minimal Latency:&lt;/b&gt; Redirection lookup must take &amp;lt; 100ms.&lt;/li&gt;&lt;li&gt;&lt;b&gt;Scalability:&lt;/b&gt; Handle 100M+ new URL creations per day (heavy read-to-write ratio of 100:1).&lt;/li&gt;&lt;li&gt;&lt;b&gt;Predictability:&lt;/b&gt; Shortened links must be completely random and non-guessable.&lt;/li&gt;&lt;/ul&gt;" vertex="1">
+          <mxGeometry height="250" width="300" x="10" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="rjr3XKbU3b1T4WsPkxHk-1" parent="1" style="swimlane;startSize=30;html=1;fontStyle=1;align=center;labelBackgroundColor=default;labelBorderColor=default;textShadow=1;whiteSpace=wrap;rounded=1;curved=0;" value="API &amp;amp; Database Specifications" vertex="1">
+          <mxGeometry height="560" width="340" x="920" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="rjr3XKbU3b1T4WsPkxHk-2" parent="rjr3XKbU3b1T4WsPkxHk-1" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;labelBackgroundColor=default;labelBorderColor=default;textShadow=1;rounded=1;curved=0;" value="&lt;b&gt;API Endpoints&lt;/b&gt;&lt;br&gt;&lt;hr&gt;&lt;b&gt;1. Create Short URL&lt;/b&gt;&lt;br&gt;&lt;font face=&quot;Courier New&quot;&gt;POST /api/v1/shorten&lt;/font&gt;&lt;br&gt;Request Body:&lt;br&gt;&lt;font face=&quot;Courier New&quot; size=&quot;1&quot;&gt;{&lt;br&gt;&amp;nbsp;&amp;nbsp;&quot;longUrl&quot;: &quot;https://...&quot;,&lt;br&gt;&amp;nbsp;&amp;nbsp;&quot;customAlias&quot;: &quot;my-link&quot;,&lt;br&gt;&amp;nbsp;&amp;nbsp;&quot;expiryDate&quot;: &quot;2026-12-31&quot;&lt;br&gt;}&lt;/font&gt;&lt;br&gt;Response: &lt;font face=&quot;Courier New&quot; size=&quot;1&quot;&gt;{&quot;shortUrl&quot;: &quot;tiny.cc/my-link&quot;}&lt;/font&gt;&lt;br&gt;&lt;br&gt;&lt;b&gt;2. Redirection&lt;/b&gt;&lt;br&gt;&lt;font face=&quot;Courier New&quot;&gt;GET /{shortUrl}&lt;/font&gt;&lt;br&gt;Response: &lt;font color=&quot;#FF0000&quot;&gt;302 Found&lt;/font&gt; (Location header)" vertex="1">
+          <mxGeometry height="210" width="320" x="10" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="rjr3XKbU3b1T4WsPkxHk-3" parent="rjr3XKbU3b1T4WsPkxHk-1" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;labelBackgroundColor=default;labelBorderColor=default;textShadow=1;rounded=1;curved=0;" value="&lt;b&gt;Database Schemas&lt;/b&gt;&lt;br&gt;&lt;hr&gt;&lt;b&gt;Table: URL_Mapping&lt;/b&gt; (Metadata DB)&lt;br&gt;&lt;table border=&quot;1&quot; style=&quot;border-collapse:collapse; width:100%; font-size:10px;&quot;&gt;&lt;tbody&gt;&lt;tr bgcolor=&quot;#d5e8d4&quot;&gt;&lt;th&gt;Field&lt;/th&gt;&lt;th&gt;Type&lt;/th&gt;&lt;th&gt;Key&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;short_hash&lt;/td&gt;&lt;td&gt;VARCHAR(8)&lt;/td&gt;&lt;td&gt;PK&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;original_url&lt;/td&gt;&lt;td&gt;VARCHAR(2048)&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;user_id&lt;/td&gt;&lt;td&gt;INT&lt;/td&gt;&lt;td&gt;FK&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;created_at&lt;/td&gt;&lt;td&gt;TIMESTAMP&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;expires_at&lt;/td&gt;&lt;td&gt;TIMESTAMP&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;br&gt;&lt;b&gt;Table: Key_Store&lt;/b&gt; (Key DB)&lt;br&gt;&lt;table border=&quot;1&quot; style=&quot;border-collapse:collapse; width:100%; font-size:10px;&quot;&gt;&lt;tbody&gt;&lt;tr bgcolor=&quot;#f8cecc&quot;&gt;&lt;th&gt;Field&lt;/th&gt;&lt;th&gt;Type&lt;/th&gt;&lt;th&gt;Key&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;key_id&lt;/td&gt;&lt;td&gt;INT&lt;/td&gt;&lt;td&gt;PK&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;key_value&lt;/td&gt;&lt;td&gt;VARCHAR(8)&lt;/td&gt;&lt;td&gt;UQ&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;is_used&lt;/td&gt;&lt;td&gt;BOOLEAN&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;" vertex="1">
+          <mxGeometry height="280" width="320" x="10" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="rjr3XKbU3b1T4WsPkxHk-4" parent="1" style="swimlane;startSize=30;html=1;fontStyle=1;align=center;labelBackgroundColor=default;labelBorderColor=default;textShadow=1;whiteSpace=wrap;rounded=1;curved=0;" value="System Requirements" vertex="1">
+          <mxGeometry height="560" width="320" x="130" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="rjr3XKbU3b1T4WsPkxHk-5" parent="rjr3XKbU3b1T4WsPkxHk-4" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;labelBackgroundColor=default;labelBorderColor=default;textShadow=1;rounded=1;curved=0;" value="&lt;b&gt;Functional Requirements&lt;/b&gt;&lt;br&gt;&lt;hr&gt;&lt;ul&gt;&lt;li&gt;&lt;b&gt;URL Shortening:&lt;/b&gt; Convert long URLs into unique, shorter aliases (e.g., tinyurl.com/abc123).&lt;/li&gt;&lt;li&gt;&lt;b&gt;Redirection:&lt;/b&gt; Instantly redirect short URLs to original URLs with HTTP 302 (Found).&lt;/li&gt;&lt;li&gt;&lt;b&gt;Custom Alias:&lt;/b&gt; Allow users to define custom short links.&lt;/li&gt;&lt;li&gt;&lt;b&gt;Expiration:&lt;/b&gt; Support custom expiration times; auto-delete expired links.&lt;/li&gt;&lt;/ul&gt;" vertex="1">
+          <mxGeometry height="240" width="300" x="10" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="rjr3XKbU3b1T4WsPkxHk-6" parent="rjr3XKbU3b1T4WsPkxHk-4" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;labelBackgroundColor=default;labelBorderColor=default;textShadow=1;rounded=1;curved=0;" value="&lt;b&gt;Non-Functional Requirements&lt;/b&gt;&lt;br&gt;&lt;hr&gt;&lt;ul&gt;&lt;li&gt;&lt;b&gt;High Availability:&lt;/b&gt; System must be highly available (99.99% uptime) with no single point of failure.&lt;/li&gt;&lt;li&gt;&lt;b&gt;Minimal Latency:&lt;/b&gt; Redirection lookup must take &amp;lt; 100ms.&lt;/li&gt;&lt;li&gt;&lt;b&gt;Scalability:&lt;/b&gt; Handle 100M+ new URL creations per day (heavy read-to-write ratio of 100:1).&lt;/li&gt;&lt;li&gt;&lt;b&gt;Predictability:&lt;/b&gt; Shortened links must be completely random and non-guessable.&lt;/li&gt;&lt;/ul&gt;" vertex="1">
+          <mxGeometry height="250" width="300" x="10" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="rjr3XKbU3b1T4WsPkxHk-7" parent="1" style="ellipse;whiteSpace=wrap;html=1;align=center;labelBackgroundColor=default;labelBorderColor=default;textShadow=1;rounded=1;curved=0;" value="&lt;b&gt;User / Browser&lt;/b&gt;&lt;br&gt;(Client Application)" vertex="1">
+          <mxGeometry height="80" width="140" x="510" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="rjr3XKbU3b1T4WsPkxHk-8" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=center;labelBackgroundColor=default;labelBorderColor=default;textShadow=1;curved=0;" value="&lt;b&gt;Load Balancer&lt;/b&gt;&lt;br&gt;(Nginx / HAProxy)" vertex="1">
+          <mxGeometry height="60" width="140" x="510" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="rjr3XKbU3b1T4WsPkxHk-9" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=center;labelBackgroundColor=default;labelBorderColor=default;textShadow=1;curved=0;" value="&lt;b&gt;Application Servers&lt;/b&gt;&lt;br&gt;(Spring Boot / Node.js API)" vertex="1">
+          <mxGeometry height="60" width="140" x="510" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="rjr3XKbU3b1T4WsPkxHk-10" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=center;labelBackgroundColor=default;labelBorderColor=default;textShadow=1;curved=0;" value="&lt;b&gt;Cache Layer&lt;/b&gt;&lt;br&gt;(Redis / Memcached)" vertex="1">
+          <mxGeometry height="60" width="140" x="510" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="rjr3XKbU3b1T4WsPkxHk-11" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;align=center;labelBackgroundColor=default;labelBorderColor=default;textShadow=1;rounded=1;curved=0;" value="&lt;b&gt;Metadata DB&lt;/b&gt;&lt;br&gt;(MongoDB / Cassandra)" vertex="1">
+          <mxGeometry height="80" width="140" x="510" y="550" as="geometry" />
+        </mxCell>
+        <mxCell id="rjr3XKbU3b1T4WsPkxHk-12" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=center;labelBackgroundColor=default;labelBorderColor=default;textShadow=1;curved=0;" value="&lt;b&gt;ZooKeeper&lt;/b&gt;&lt;br&gt;(Coordination Service)" vertex="1">
+          <mxGeometry height="60" width="140" x="730" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="rjr3XKbU3b1T4WsPkxHk-13" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=center;labelBackgroundColor=default;labelBorderColor=default;textShadow=1;curved=0;" value="&lt;b&gt;Key Gen Service (KGS)&lt;/b&gt;&lt;br&gt;(Pre-allocates unique keys)" vertex="1">
+          <mxGeometry height="60" width="140" x="730" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="rjr3XKbU3b1T4WsPkxHk-14" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;align=center;labelBackgroundColor=default;labelBorderColor=default;textShadow=1;rounded=1;curved=0;" value="&lt;b&gt;Key DB&lt;/b&gt;&lt;br&gt;(SQL Server / MySQL)" vertex="1">
+          <mxGeometry height="80" width="140" x="730" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="rjr3XKbU3b1T4WsPkxHk-15" edge="1" parent="1" source="rjr3XKbU3b1T4WsPkxHk-7" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;labelBackgroundColor=default;labelBorderColor=default;textShadow=1;curved=0;" target="rjr3XKbU3b1T4WsPkxHk-8" value="HTTP Requests">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rjr3XKbU3b1T4WsPkxHk-16" edge="1" parent="1" source="rjr3XKbU3b1T4WsPkxHk-8" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;labelBackgroundColor=default;labelBorderColor=default;textShadow=1;curved=0;" target="rjr3XKbU3b1T4WsPkxHk-9" value="Route Traffic">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rjr3XKbU3b1T4WsPkxHk-17" edge="1" parent="1" source="rjr3XKbU3b1T4WsPkxHk-9" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;labelBackgroundColor=default;labelBorderColor=default;textShadow=1;curved=0;" target="rjr3XKbU3b1T4WsPkxHk-10" value="1. Check Cache">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rjr3XKbU3b1T4WsPkxHk-18" edge="1" parent="1" source="rjr3XKbU3b1T4WsPkxHk-10" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;labelBackgroundColor=default;labelBorderColor=default;textShadow=1;curved=0;" target="rjr3XKbU3b1T4WsPkxHk-11" value="2. DB Lookup (Cache Miss)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rjr3XKbU3b1T4WsPkxHk-19" edge="1" parent="1" source="rjr3XKbU3b1T4WsPkxHk-9" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;labelBackgroundColor=default;labelBorderColor=default;textShadow=1;curved=0;" target="rjr3XKbU3b1T4WsPkxHk-13" value="3. Get Pre-generated Key">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rjr3XKbU3b1T4WsPkxHk-20" edge="1" parent="1" source="rjr3XKbU3b1T4WsPkxHk-13" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;labelBackgroundColor=default;labelBorderColor=default;textShadow=1;curved=0;" target="rjr3XKbU3b1T4WsPkxHk-14" value="Fetch &amp;amp; Mark Used">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rjr3XKbU3b1T4WsPkxHk-21" edge="1" parent="1" source="rjr3XKbU3b1T4WsPkxHk-12" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;labelBackgroundColor=default;labelBorderColor=default;textShadow=1;curved=0;" target="rjr3XKbU3b1T4WsPkxHk-13" value="Manage Key Ranges">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
