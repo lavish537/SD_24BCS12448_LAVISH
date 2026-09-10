@@ -1,0 +1,383 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="MI6pQ9K58NjZKWP_AZYK">
+    <mxGraphModel dx="1200" dy="676" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="W_MBKVfeXcQ_FUHnA51i-115" parent="1" style="text;html=1;fontSize=22;fontStyle=1;align=center;verticalAlign=middle;" value="Netflix — Requirements and Simple High-Level Design" vertex="1">
+          <mxGeometry height="50" width="1240" x="320" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="W_MBKVfeXcQ_FUHnA51i-116" parent="1" style="swimlane;startSize=30;fillColor=#e8f4f8;strokeColor=#6c8ebf;html=1;fontStyle=1;" value="Functional Requirements" vertex="1">
+          <mxGeometry height="500" width="580" x="320" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="W_MBKVfeXcQ_FUHnA51i-117" parent="W_MBKVfeXcQ_FUHnA51i-116" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;" value="User registration, login and profiles" vertex="1">
+          <mxGeometry height="60" width="240" x="30" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="W_MBKVfeXcQ_FUHnA51i-118" parent="W_MBKVfeXcQ_FUHnA51i-116" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;" value="Browse and search movies, shows and genres" vertex="1">
+          <mxGeometry height="60" width="240" x="300" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="W_MBKVfeXcQ_FUHnA51i-119" parent="W_MBKVfeXcQ_FUHnA51i-116" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;" value="Personalized recommendations" vertex="1">
+          <mxGeometry height="60" width="240" x="30" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="W_MBKVfeXcQ_FUHnA51i-120" parent="W_MBKVfeXcQ_FUHnA51i-116" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;" value="Stream video with adaptive quality" vertex="1">
+          <mxGeometry height="60" width="240" x="300" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="W_MBKVfeXcQ_FUHnA51i-121" parent="W_MBKVfeXcQ_FUHnA51i-116" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;" value="Playback controls, subtitles and multiple audio tracks" vertex="1">
+          <mxGeometry height="60" width="240" x="30" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="W_MBKVfeXcQ_FUHnA51i-122" parent="W_MBKVfeXcQ_FUHnA51i-116" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;" value="Watchlist, continue watching and viewing history" vertex="1">
+          <mxGeometry height="60" width="240" x="300" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="W_MBKVfeXcQ_FUHnA51i-123" parent="W_MBKVfeXcQ_FUHnA51i-116" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;" value="Subscription plans and secure payments" vertex="1">
+          <mxGeometry height="60" width="240" x="30" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="W_MBKVfeXcQ_FUHnA51i-124" parent="W_MBKVfeXcQ_FUHnA51i-116" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;" value="Admin content, catalog and user management" vertex="1">
+          <mxGeometry height="60" width="240" x="300" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="W_MBKVfeXcQ_FUHnA51i-125" parent="1" style="swimlane;startSize=30;fillColor=#fff9e6;strokeColor=#d6b656;html=1;fontStyle=1;" value="Non-Functional Requirements" vertex="1">
+          <mxGeometry height="500" width="580" x="980" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="W_MBKVfeXcQ_FUHnA51i-126" parent="W_MBKVfeXcQ_FUHnA51i-125" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;" value="High availability and fault tolerance" vertex="1">
+          <mxGeometry height="60" width="240" x="30" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="W_MBKVfeXcQ_FUHnA51i-127" parent="W_MBKVfeXcQ_FUHnA51i-125" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;" value="Low startup latency and smooth playback" vertex="1">
+          <mxGeometry height="60" width="240" x="300" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="W_MBKVfeXcQ_FUHnA51i-128" parent="W_MBKVfeXcQ_FUHnA51i-125" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;" value="Scalability for millions of concurrent viewers" vertex="1">
+          <mxGeometry height="60" width="240" x="30" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="W_MBKVfeXcQ_FUHnA51i-129" parent="W_MBKVfeXcQ_FUHnA51i-125" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;" value="Security, privacy and DRM protection" vertex="1">
+          <mxGeometry height="60" width="240" x="300" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="W_MBKVfeXcQ_FUHnA51i-130" parent="W_MBKVfeXcQ_FUHnA51i-125" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;" value="Global availability and multi-region deployment" vertex="1">
+          <mxGeometry height="60" width="240" x="30" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="W_MBKVfeXcQ_FUHnA51i-131" parent="W_MBKVfeXcQ_FUHnA51i-125" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;" value="Observability, monitoring and rapid recovery" vertex="1">
+          <mxGeometry height="60" width="240" x="300" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="W_MBKVfeXcQ_FUHnA51i-132" parent="W_MBKVfeXcQ_FUHnA51i-125" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;" value="Consistent user experience across devices" vertex="1">
+          <mxGeometry height="60" width="240" x="30" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="W_MBKVfeXcQ_FUHnA51i-133" parent="W_MBKVfeXcQ_FUHnA51i-125" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;" value="Cost-efficient storage and content delivery" vertex="1">
+          <mxGeometry height="60" width="240" x="300" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="W_MBKVfeXcQ_FUHnA51i-134" parent="1" style="swimlane;startSize=30;fillColor=#e8f5e9;strokeColor=#82b366;html=1;fontStyle=1;" value="Simple High-Level Design" vertex="1">
+          <mxGeometry height="430" width="1700" x="90" y="700" as="geometry" />
+        </mxCell>
+        <mxCell id="W_MBKVfeXcQ_FUHnA51i-135" parent="W_MBKVfeXcQ_FUHnA51i-134" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Web, Mobile, Smart TV and Console Clients" vertex="1">
+          <mxGeometry height="70" width="180" x="30" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="W_MBKVfeXcQ_FUHnA51i-136" parent="W_MBKVfeXcQ_FUHnA51i-134" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="DNS, CDN and Edge Cache" vertex="1">
+          <mxGeometry height="70" width="180" x="270" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="W_MBKVfeXcQ_FUHnA51i-137" parent="W_MBKVfeXcQ_FUHnA51i-134" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" value="API Gateway and Load Balancer" vertex="1">
+          <mxGeometry height="70" width="180" x="610" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="W_MBKVfeXcQ_FUHnA51i-140" parent="W_MBKVfeXcQ_FUHnA51i-134" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" value="Content Ingest and Encoding Pipeline" vertex="1">
+          <mxGeometry height="70" width="220" x="270" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="W_MBKVfeXcQ_FUHnA51i-141" parent="W_MBKVfeXcQ_FUHnA51i-134" style="shape=cylinder3;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" value="Object Storage&lt;br&gt;Master Video, Encoded Segments and Subtitles" vertex="1">
+          <mxGeometry height="100" width="220" x="570" y="225" as="geometry" />
+        </mxCell>
+        <mxCell id="W_MBKVfeXcQ_FUHnA51i-138" parent="W_MBKVfeXcQ_FUHnA51i-134" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" value="Microservices&lt;br&gt;Identity • Catalog • Playback • Billing • Recommendation" vertex="1">
+          <mxGeometry height="110" width="250" x="1000" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="W_MBKVfeXcQ_FUHnA51i-139" parent="W_MBKVfeXcQ_FUHnA51i-134" style="shape=cylinder3;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" value="Databases&lt;br&gt;User, Catalog, Billing and Watch History" vertex="1">
+          <mxGeometry height="100" width="150" x="1290" y="55" as="geometry" />
+        </mxCell>
+        <mxCell id="W_MBKVfeXcQ_FUHnA51i-142" parent="W_MBKVfeXcQ_FUHnA51i-134" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Analytics and Recommendation Platform" vertex="1">
+          <mxGeometry height="70" width="220" x="1120" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="W_MBKVfeXcQ_FUHnA51i-145" edge="1" parent="W_MBKVfeXcQ_FUHnA51i-134" style="edgeStyle=orthogonalEdgeStyle;rounded=1;endArrow=classic;html=1;" target="W_MBKVfeXcQ_FUHnA51i-138" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="940" y="105" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="W_MBKVfeXcQ_FUHnA51i-146" edge="1" parent="W_MBKVfeXcQ_FUHnA51i-134" source="W_MBKVfeXcQ_FUHnA51i-138" style="edgeStyle=orthogonalEdgeStyle;rounded=1;endArrow=classic;html=1;" target="W_MBKVfeXcQ_FUHnA51i-139" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="W_MBKVfeXcQ_FUHnA51i-150" edge="1" parent="W_MBKVfeXcQ_FUHnA51i-134" source="W_MBKVfeXcQ_FUHnA51i-138" style="edgeStyle=orthogonalEdgeStyle;rounded=1;dashed=1;endArrow=classic;html=1;" target="W_MBKVfeXcQ_FUHnA51i-142" value="Events">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="W_MBKVfeXcQ_FUHnA51i-151" edge="1" parent="W_MBKVfeXcQ_FUHnA51i-134" source="W_MBKVfeXcQ_FUHnA51i-142" style="edgeStyle=orthogonalEdgeStyle;rounded=1;dashed=1;endArrow=classic;html=1;" target="W_MBKVfeXcQ_FUHnA51i-138" value="Recommendations">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="W_MBKVfeXcQ_FUHnA51i-143" edge="1" parent="1" source="W_MBKVfeXcQ_FUHnA51i-135" style="edgeStyle=orthogonalEdgeStyle;rounded=1;endArrow=classic;html=1;" target="W_MBKVfeXcQ_FUHnA51i-136" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="W_MBKVfeXcQ_FUHnA51i-144" edge="1" parent="1" source="W_MBKVfeXcQ_FUHnA51i-136" style="edgeStyle=orthogonalEdgeStyle;rounded=1;endArrow=classic;html=1;" target="W_MBKVfeXcQ_FUHnA51i-137" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="W_MBKVfeXcQ_FUHnA51i-147" edge="1" parent="1" source="W_MBKVfeXcQ_FUHnA51i-138" style="edgeStyle=orthogonalEdgeStyle;rounded=1;dashed=1;endArrow=classic;html=1;" target="W_MBKVfeXcQ_FUHnA51i-136" value="Video delivery">
+          <mxGeometry relative="1" x="-0.5636" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="W_MBKVfeXcQ_FUHnA51i-148" edge="1" parent="1" source="W_MBKVfeXcQ_FUHnA51i-140" style="edgeStyle=orthogonalEdgeStyle;rounded=1;endArrow=classic;html=1;" target="W_MBKVfeXcQ_FUHnA51i-141" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="W_MBKVfeXcQ_FUHnA51i-149" edge="1" parent="1" source="W_MBKVfeXcQ_FUHnA51i-141" style="edgeStyle=orthogonalEdgeStyle;rounded=1;dashed=1;endArrow=classic;html=1;" target="W_MBKVfeXcQ_FUHnA51i-136" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="W_MBKVfeXcQ_FUHnA51i-275" parent="1" style="shape=table;childLayout=tableLayout;startSize=0;collapsible=0;fillColor=none;html=1;" value="Database Schema" vertex="1">
+          <mxGeometry height="520" width="720" x="1600" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="W_MBKVfeXcQ_FUHnA51i-276" parent="W_MBKVfeXcQ_FUHnA51i-275" style="shape=tableRow;horizontal=0;startSize=0;collapsible=0;" vertex="1">
+          <mxGeometry height="40" width="720" as="geometry" />
+        </mxCell>
+        <mxCell id="W_MBKVfeXcQ_FUHnA51i-277" parent="W_MBKVfeXcQ_FUHnA51i-276" style="text;html=1;fontStyle=1;fillColor=#dae8fc;align=center;" value="Table" vertex="1">
+          <mxGeometry height="40" width="180" as="geometry">
+            <mxRectangle height="40" width="180" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="W_MBKVfeXcQ_FUHnA51i-278" parent="W_MBKVfeXcQ_FUHnA51i-276" style="text;html=1;fontStyle=1;fillColor=#dae8fc;align=center;" value="Primary Key" vertex="1">
+          <mxGeometry height="40" width="180" x="180" as="geometry">
+            <mxRectangle height="40" width="180" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="W_MBKVfeXcQ_FUHnA51i-279" parent="W_MBKVfeXcQ_FUHnA51i-276" style="text;html=1;fontStyle=1;fillColor=#dae8fc;align=center;" value="Important Columns" vertex="1">
+          <mxGeometry height="40" width="360" x="360" as="geometry">
+            <mxRectangle height="40" width="360" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="W_MBKVfeXcQ_FUHnA51i-280" parent="W_MBKVfeXcQ_FUHnA51i-275" style="shape=tableRow;horizontal=0;startSize=0;collapsible=0;" vertex="1">
+          <mxGeometry height="80" width="720" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="W_MBKVfeXcQ_FUHnA51i-281" parent="W_MBKVfeXcQ_FUHnA51i-280" style="text;html=1;" value="Users" vertex="1">
+          <mxGeometry height="80" width="180" as="geometry">
+            <mxRectangle height="80" width="180" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="W_MBKVfeXcQ_FUHnA51i-282" parent="W_MBKVfeXcQ_FUHnA51i-280" style="text;html=1;" value="user_id" vertex="1">
+          <mxGeometry height="80" width="180" x="180" as="geometry">
+            <mxRectangle height="80" width="180" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="W_MBKVfeXcQ_FUHnA51i-283" parent="W_MBKVfeXcQ_FUHnA51i-280" style="text;html=1;" value="email, password_hash, profile_id, created_at" vertex="1">
+          <mxGeometry height="80" width="360" x="360" as="geometry">
+            <mxRectangle height="80" width="360" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="W_MBKVfeXcQ_FUHnA51i-284" parent="W_MBKVfeXcQ_FUHnA51i-275" style="shape=tableRow;horizontal=0;startSize=0;collapsible=0;" vertex="1">
+          <mxGeometry height="80" width="720" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="W_MBKVfeXcQ_FUHnA51i-285" parent="W_MBKVfeXcQ_FUHnA51i-284" style="text;html=1;" value="Profiles" vertex="1">
+          <mxGeometry height="80" width="180" as="geometry">
+            <mxRectangle height="80" width="180" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="W_MBKVfeXcQ_FUHnA51i-286" parent="W_MBKVfeXcQ_FUHnA51i-284" style="text;html=1;" value="profile_id" vertex="1">
+          <mxGeometry height="80" width="180" x="180" as="geometry">
+            <mxRectangle height="80" width="180" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="W_MBKVfeXcQ_FUHnA51i-287" parent="W_MBKVfeXcQ_FUHnA51i-284" style="text;html=1;" value="user_id, name, maturity_level, language" vertex="1">
+          <mxGeometry height="80" width="360" x="360" as="geometry">
+            <mxRectangle height="80" width="360" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="W_MBKVfeXcQ_FUHnA51i-288" parent="W_MBKVfeXcQ_FUHnA51i-275" style="shape=tableRow;horizontal=0;startSize=0;collapsible=0;" vertex="1">
+          <mxGeometry height="80" width="720" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="W_MBKVfeXcQ_FUHnA51i-289" parent="W_MBKVfeXcQ_FUHnA51i-288" style="text;html=1;" value="Titles" vertex="1">
+          <mxGeometry height="80" width="180" as="geometry">
+            <mxRectangle height="80" width="180" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="W_MBKVfeXcQ_FUHnA51i-290" parent="W_MBKVfeXcQ_FUHnA51i-288" style="text;html=1;" value="title_id" vertex="1">
+          <mxGeometry height="80" width="180" x="180" as="geometry">
+            <mxRectangle height="80" width="180" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="W_MBKVfeXcQ_FUHnA51i-291" parent="W_MBKVfeXcQ_FUHnA51i-288" style="text;html=1;" value="type, name, description, release_year, duration" vertex="1">
+          <mxGeometry height="80" width="360" x="360" as="geometry">
+            <mxRectangle height="80" width="360" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="W_MBKVfeXcQ_FUHnA51i-292" parent="W_MBKVfeXcQ_FUHnA51i-275" style="shape=tableRow;horizontal=0;startSize=0;collapsible=0;" vertex="1">
+          <mxGeometry height="80" width="720" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="W_MBKVfeXcQ_FUHnA51i-293" parent="W_MBKVfeXcQ_FUHnA51i-292" style="text;html=1;" value="Genres" vertex="1">
+          <mxGeometry height="80" width="180" as="geometry">
+            <mxRectangle height="80" width="180" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="W_MBKVfeXcQ_FUHnA51i-294" parent="W_MBKVfeXcQ_FUHnA51i-292" style="text;html=1;" value="genre_id" vertex="1">
+          <mxGeometry height="80" width="180" x="180" as="geometry">
+            <mxRectangle height="80" width="180" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="W_MBKVfeXcQ_FUHnA51i-295" parent="W_MBKVfeXcQ_FUHnA51i-292" style="text;html=1;" value="name, description" vertex="1">
+          <mxGeometry height="80" width="360" x="360" as="geometry">
+            <mxRectangle height="80" width="360" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="W_MBKVfeXcQ_FUHnA51i-296" parent="W_MBKVfeXcQ_FUHnA51i-275" style="shape=tableRow;horizontal=0;startSize=0;collapsible=0;" vertex="1">
+          <mxGeometry height="80" width="720" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="W_MBKVfeXcQ_FUHnA51i-297" parent="W_MBKVfeXcQ_FUHnA51i-296" style="text;html=1;" value="WatchHistory" vertex="1">
+          <mxGeometry height="80" width="180" as="geometry">
+            <mxRectangle height="80" width="180" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="W_MBKVfeXcQ_FUHnA51i-298" parent="W_MBKVfeXcQ_FUHnA51i-296" style="text;html=1;" value="history_id" vertex="1">
+          <mxGeometry height="80" width="180" x="180" as="geometry">
+            <mxRectangle height="80" width="180" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="W_MBKVfeXcQ_FUHnA51i-299" parent="W_MBKVfeXcQ_FUHnA51i-296" style="text;html=1;" value="profile_id, title_id, progress_seconds, watched_at" vertex="1">
+          <mxGeometry height="80" width="360" x="360" as="geometry">
+            <mxRectangle height="80" width="360" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="W_MBKVfeXcQ_FUHnA51i-300" parent="W_MBKVfeXcQ_FUHnA51i-275" style="shape=tableRow;horizontal=0;startSize=0;collapsible=0;" vertex="1">
+          <mxGeometry height="80" width="720" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="W_MBKVfeXcQ_FUHnA51i-301" parent="W_MBKVfeXcQ_FUHnA51i-300" style="text;html=1;" value="Subscriptions" vertex="1">
+          <mxGeometry height="80" width="180" as="geometry">
+            <mxRectangle height="80" width="180" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="W_MBKVfeXcQ_FUHnA51i-302" parent="W_MBKVfeXcQ_FUHnA51i-300" style="text;html=1;" value="subscription_id" vertex="1">
+          <mxGeometry height="80" width="180" x="180" as="geometry">
+            <mxRectangle height="80" width="180" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="W_MBKVfeXcQ_FUHnA51i-303" parent="W_MBKVfeXcQ_FUHnA51i-300" style="text;html=1;" value="user_id, plan, status, started_at, expires_at" vertex="1">
+          <mxGeometry height="80" width="360" x="360" as="geometry">
+            <mxRectangle height="80" width="360" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="W_MBKVfeXcQ_FUHnA51i-304" parent="1" style="shape=table;childLayout=tableLayout;startSize=0;collapsible=0;fillColor=none;html=1;" value="API Endpoints" vertex="1">
+          <mxGeometry height="520" width="720" x="2380" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="W_MBKVfeXcQ_FUHnA51i-305" parent="W_MBKVfeXcQ_FUHnA51i-304" style="shape=tableRow;horizontal=0;startSize=0;collapsible=0;" vertex="1">
+          <mxGeometry height="40" width="720" as="geometry" />
+        </mxCell>
+        <mxCell id="W_MBKVfeXcQ_FUHnA51i-306" parent="W_MBKVfeXcQ_FUHnA51i-305" style="text;html=1;fontStyle=1;fillColor=#d5e8d4;align=center;" value="Method" vertex="1">
+          <mxGeometry height="40" width="120" as="geometry">
+            <mxRectangle height="40" width="120" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="W_MBKVfeXcQ_FUHnA51i-307" parent="W_MBKVfeXcQ_FUHnA51i-305" style="text;html=1;fontStyle=1;fillColor=#d5e8d4;align=center;" value="Endpoint" vertex="1">
+          <mxGeometry height="40" width="300" x="120" as="geometry">
+            <mxRectangle height="40" width="300" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="W_MBKVfeXcQ_FUHnA51i-308" parent="W_MBKVfeXcQ_FUHnA51i-305" style="text;html=1;fontStyle=1;fillColor=#d5e8d4;align=center;" value="Purpose" vertex="1">
+          <mxGeometry height="40" width="300" x="420" as="geometry">
+            <mxRectangle height="40" width="300" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="W_MBKVfeXcQ_FUHnA51i-309" parent="W_MBKVfeXcQ_FUHnA51i-304" style="shape=tableRow;horizontal=0;startSize=0;collapsible=0;" vertex="1">
+          <mxGeometry height="80" width="720" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="W_MBKVfeXcQ_FUHnA51i-310" parent="W_MBKVfeXcQ_FUHnA51i-309" style="text;html=1;" value="POST" vertex="1">
+          <mxGeometry height="80" width="120" as="geometry">
+            <mxRectangle height="80" width="120" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="W_MBKVfeXcQ_FUHnA51i-311" parent="W_MBKVfeXcQ_FUHnA51i-309" style="text;html=1;" value="/v1/auth/login" vertex="1">
+          <mxGeometry height="80" width="300" x="120" as="geometry">
+            <mxRectangle height="80" width="300" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="W_MBKVfeXcQ_FUHnA51i-312" parent="W_MBKVfeXcQ_FUHnA51i-309" style="text;html=1;" value="Authenticate user" vertex="1">
+          <mxGeometry height="80" width="300" x="420" as="geometry">
+            <mxRectangle height="80" width="300" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="W_MBKVfeXcQ_FUHnA51i-313" parent="W_MBKVfeXcQ_FUHnA51i-304" style="shape=tableRow;horizontal=0;startSize=0;collapsible=0;" vertex="1">
+          <mxGeometry height="80" width="720" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="W_MBKVfeXcQ_FUHnA51i-314" parent="W_MBKVfeXcQ_FUHnA51i-313" style="text;html=1;" value="GET" vertex="1">
+          <mxGeometry height="80" width="120" as="geometry">
+            <mxRectangle height="80" width="120" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="W_MBKVfeXcQ_FUHnA51i-315" parent="W_MBKVfeXcQ_FUHnA51i-313" style="text;html=1;" value="/v1/profiles" vertex="1">
+          <mxGeometry height="80" width="300" x="120" as="geometry">
+            <mxRectangle height="80" width="300" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="W_MBKVfeXcQ_FUHnA51i-316" parent="W_MBKVfeXcQ_FUHnA51i-313" style="text;html=1;" value="List user profiles" vertex="1">
+          <mxGeometry height="80" width="300" x="420" as="geometry">
+            <mxRectangle height="80" width="300" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="W_MBKVfeXcQ_FUHnA51i-317" parent="W_MBKVfeXcQ_FUHnA51i-304" style="shape=tableRow;horizontal=0;startSize=0;collapsible=0;" vertex="1">
+          <mxGeometry height="80" width="720" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="W_MBKVfeXcQ_FUHnA51i-318" parent="W_MBKVfeXcQ_FUHnA51i-317" style="text;html=1;" value="GET" vertex="1">
+          <mxGeometry height="80" width="120" as="geometry">
+            <mxRectangle height="80" width="120" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="W_MBKVfeXcQ_FUHnA51i-319" parent="W_MBKVfeXcQ_FUHnA51i-317" style="text;html=1;" value="/v1/titles?genre={genre}" vertex="1">
+          <mxGeometry height="80" width="300" x="120" as="geometry">
+            <mxRectangle height="80" width="300" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="W_MBKVfeXcQ_FUHnA51i-320" parent="W_MBKVfeXcQ_FUHnA51i-317" style="text;html=1;" value="Browse and search titles" vertex="1">
+          <mxGeometry height="80" width="300" x="420" as="geometry">
+            <mxRectangle height="80" width="300" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="W_MBKVfeXcQ_FUHnA51i-321" parent="W_MBKVfeXcQ_FUHnA51i-304" style="shape=tableRow;horizontal=0;startSize=0;collapsible=0;" vertex="1">
+          <mxGeometry height="80" width="720" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="W_MBKVfeXcQ_FUHnA51i-322" parent="W_MBKVfeXcQ_FUHnA51i-321" style="text;html=1;" value="GET" vertex="1">
+          <mxGeometry height="80" width="120" as="geometry">
+            <mxRectangle height="80" width="120" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="W_MBKVfeXcQ_FUHnA51i-323" parent="W_MBKVfeXcQ_FUHnA51i-321" style="text;html=1;" value="/v1/recommendations" vertex="1">
+          <mxGeometry height="80" width="300" x="120" as="geometry">
+            <mxRectangle height="80" width="300" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="W_MBKVfeXcQ_FUHnA51i-324" parent="W_MBKVfeXcQ_FUHnA51i-321" style="text;html=1;" value="Get personalized recommendations" vertex="1">
+          <mxGeometry height="80" width="300" x="420" as="geometry">
+            <mxRectangle height="80" width="300" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="W_MBKVfeXcQ_FUHnA51i-325" parent="W_MBKVfeXcQ_FUHnA51i-304" style="shape=tableRow;horizontal=0;startSize=0;collapsible=0;" vertex="1">
+          <mxGeometry height="80" width="720" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="W_MBKVfeXcQ_FUHnA51i-326" parent="W_MBKVfeXcQ_FUHnA51i-325" style="text;html=1;" value="POST" vertex="1">
+          <mxGeometry height="80" width="120" as="geometry">
+            <mxRectangle height="80" width="120" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="W_MBKVfeXcQ_FUHnA51i-327" parent="W_MBKVfeXcQ_FUHnA51i-325" style="text;html=1;" value="/v1/watch-history" vertex="1">
+          <mxGeometry height="80" width="300" x="120" as="geometry">
+            <mxRectangle height="80" width="300" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="W_MBKVfeXcQ_FUHnA51i-328" parent="W_MBKVfeXcQ_FUHnA51i-325" style="text;html=1;" value="Save viewing progress" vertex="1">
+          <mxGeometry height="80" width="300" x="420" as="geometry">
+            <mxRectangle height="80" width="300" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="W_MBKVfeXcQ_FUHnA51i-329" parent="W_MBKVfeXcQ_FUHnA51i-304" style="shape=tableRow;horizontal=0;startSize=0;collapsible=0;" vertex="1">
+          <mxGeometry height="80" width="720" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="W_MBKVfeXcQ_FUHnA51i-330" parent="W_MBKVfeXcQ_FUHnA51i-329" style="text;html=1;" value="POST" vertex="1">
+          <mxGeometry height="80" width="120" as="geometry">
+            <mxRectangle height="80" width="120" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="W_MBKVfeXcQ_FUHnA51i-331" parent="W_MBKVfeXcQ_FUHnA51i-329" style="text;html=1;" value="/v1/subscriptions" vertex="1">
+          <mxGeometry height="80" width="300" x="120" as="geometry">
+            <mxRectangle height="80" width="300" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="W_MBKVfeXcQ_FUHnA51i-332" parent="W_MBKVfeXcQ_FUHnA51i-329" style="text;html=1;" value="Create or change subscription" vertex="1">
+          <mxGeometry height="80" width="300" x="420" as="geometry">
+            <mxRectangle height="80" width="300" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
